@@ -1,0 +1,19 @@
+.signin-container {
+    height: 100vh;
+    background: linear-gradient(to right, #ff7043, #ffe082);
+    padding: 2rem;
+  }
+  
+  .card {
+    border-radius: 1rem;
+  }
+  
+  input::placeholder {
+    color: #aaa;
+  }
+  
+  button:hover {
+    background-color: #ffc107;
+    transition: 0.3s ease;
+  }
+  
