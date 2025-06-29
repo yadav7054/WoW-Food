@@ -1,0 +1,24 @@
+.order-history-container {
+    background-color: #f8f9fa; /* Light gray background */
+  }
+  
+  .order-card {
+    /* Basic card styling is now handled by Bootstrap's .card */
+  }
+  
+  .card-header {
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .card-text strong {
+    color: #007bff; /* Primary color for emphasis */
+  }
+  
+  .list-unstyled li i {
+    font-size: 0.9rem;
+  }
+  
+  .badge {
+    font-size: 0.8rem;
+  }
