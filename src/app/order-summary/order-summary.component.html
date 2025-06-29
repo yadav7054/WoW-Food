@@ -1,0 +1,57 @@
+<div class="container py-5">
+    <div class="text-center mb-5">
+    <h2 class="fw-bold display-5 text-success">Order Summary</h2>
+    <p class="text-muted">Here is your bill for the delicious items you ordered!</p>
+    </div>
+     
+      <table class="table table-bordered shadow-sm rounded">
+    <thead class="table-warning">
+    <tr>
+    <th>Item</th>
+    <th>Price (₹)</th>
+    <th>Quantity</th>
+    <th>Subtotal (₹)</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of cartItems">
+    <td>{{ item.name }}</td>
+    <td>{{ item.price }}</td>
+    <td>{{ item.quantity }}</td>
+    <td>{{ item.price * item.quantity }}</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+    <th colspan="3" class="text-end">Subtotal</th>
+    <td>₹{{ subtotal }}</td>
+    </tr>
+    <tr>
+    <th colspan="3" class="text-end">Tax (5%)</th>
+    <td>₹{{ tax.toFixed(2) }}</td>
+    </tr>
+    <tr *ngIf="discount > 0">
+    <th colspan="3" class="text-end text-success">Discount (25%)</th>
+    <td>- ₹{{ discount.toFixed(2) }}</td>
+    </tr>
+    <tr class="table-success fw-bold">
+    <th colspan="3" class="text-end">Total</th>
+    <td>₹{{ total.toFixed(2) }}</td>
+    </tr>
+    </tfoot>
+    </table>
+     
+      <div class="text-center my-5">
+    <h4 class="text-success fw-bold">Thank you for your order!</h4>
+    <p class="text-muted">We've received your order and it's being prepared.</p>
+    <button class="btn btn-warning mt-3 fw-bold px-4" (click)="orderAgain()" routerLink="/menu">Order Again</button>
+    </div>
+     
+      <div class="mt-5">
+    <h5 class="fw-bold">Leave Feedback</h5>
+    <textarea [(ngModel)]="feedback" rows="3" class="form-control mb-3" placeholder="Write your feedback here..."></textarea>
+    <button class="btn btn-outline-success" (click)="submitFeedback()">Submit Feedback</button>
+    </div>
+    </div>
+    
+     
