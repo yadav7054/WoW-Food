@@ -1,0 +1,14 @@
+.menu-container {
+    background: linear-gradient(to bottom, #fff8e1, #ffe082);
+    min-height: 100vh;
+  }
+  
+  .card-title {
+    font-size: 1.1rem;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    transition: 0.3s ease;
+  }
+  
