@@ -1,0 +1,8 @@
+footer a:hover {
+    text-decoration: underline;
+    color: #ffc107 !important;
+  }
+  
+  footer hr {
+    opacity: 0.15;
+  }

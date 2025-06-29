@@ -1,0 +1,53 @@
+<footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+    <div class="row">
+
+        <!-- Logo & About -->
+        <div class="col-md-4 mb-4">
+        <div class="d-flex align-items-center mb-3">
+            <img src="assets/logo.png" alt="Wow-Food" width="50" height="50" class="me-2 rounded-circle border border-light">
+            <h4 class="fw-bold mb-0">Wow-Food</h4>
+        </div>
+        <p>Your favorite meals delivered hot & fast at your doorstep. Experience the joy of food with Wow-Food.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-2 mb-4">
+        <h5 class="fw-bold">Quick Links</h5>
+        <ul class="list-unstyled">
+            <li><a routerLink="/" (click)="home()" class="text-white text-decoration-none">Home</a></li>
+            <li><a  *ngIf="!isLoggedIn" (click)="signin()" routerLink="/signin" class="text-white text-decoration-none">Sign In</a></li>
+            <li><a  *ngIf="!isLoggedIn"  (click)="signup()" routerLink="/signup" class="text-white text-decoration-none">Sign Up</a></li>
+            <li><a routerLink="/cart" (click)="cart()" class="text-white text-decoration-none">Cart</a></li>
+            <li><a  *ngIf="isLoggedIn" (click)="logout()" routerLink="/home" class="text-white text-decoration-none">Logout</a></li>
+        </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-md-3 mb-4">
+        <h5 class="fw-bold">Contact Us</h5>
+        <p>Email: support.wowfood.com</p>
+        <p>Phone: +91 98765 43210</p>
+        <p>Location: Chennai, India</p>
+        </div>
+
+        <!-- App & Social -->
+        <div class="col-md-3 mb-4">
+        <h5 class="fw-bold">Get Our App</h5>
+        <div class="d-flex gap-2 mb-3">
+            <a href="../../assets/coming-soon.html"><img src="assets/google.png" alt="Google Play" height="40"></a>
+            <a href="../../assets/coming-soon.html"><img src="assets/app-store.jfif" alt="App Store" height="40"></a>
+        </div>
+        <h6 class="fw-bold">Follow Us</h6>
+        <div class="d-flex gap-3 fs-4">
+            <a  href="../../assets/coming-soon.html" class="text-white"><i class="bi bi-instagram"></i></a>
+            <a  href="../..assets/coming-soon.html" class="text-white"><i class="bi bi-facebook"></i></a>
+            <a  href="../..assets/coming-soon.html" class="text-white"><i class="bi bi-twitter-x"></i></a>
+        </div>
+        </div>
+    </div>
+
+    <hr class="bg-light">
+    <p class="text-center mb-0">&copy; 2025 Wow-Food. All rights reserved.</p>
+    </div>
+</footer>
