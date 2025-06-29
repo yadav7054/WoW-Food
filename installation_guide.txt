@@ -1,0 +1,88 @@
+Angular Project Terminal Commands Summary
+This document summarizes the key terminal commands you've used for your Angular project (wow-food) and explains their purpose and typical output.
+
+1. Checking Node.js Version
+Command: node -v
+
+Purpose: This command checks the installed version of Node.js on your system. Node.js is a JavaScript runtime environment that Angular CLI and many other tools rely on.
+
+Your Output: v23.9.0
+
+Note: Your Node.js version is v23.9.0. The ng version command later indicates this is an unsupported odd-numbered version for production Angular projects. It's generally recommended to use an LTS (Long Term Support) version of Node.js for stability.
+
+2. Checking npm Version
+Command: npm -v
+
+Purpose: This command checks the installed version of npm (Node Package Manager). npm is used to install and manage project dependencies.
+
+Your Output: 10.9.2
+
+3. Checking Angular CLI and Project Versions
+Command: ng version
+
+Purpose: This command provides detailed information about your Angular CLI version, Node.js version, npm version, operating system, and the versions of various Angular core packages and dev dependencies used in your current project.
+
+Your Output Highlights:
+
+Angular CLI: 16.2.16
+
+Node: 23.9.0 (Unsupported) - Reconfirms the Node.js version and warns about its unsupported status for Angular.
+
+Package Manager: npm 10.9.2
+
+OS: win32 x64
+
+Various Angular package versions (animations, common, compiler, core, etc.) and typescript: 5.8.3.
+
+Note: The warning about the Node.js version is important. For long-term stability and compatibility with Angular, consider downgrading to a Node.js LTS version (e.g., Node 18.x or 20.x, depending on Angular 16's specific recommendations).
+
+4. Installing Project Dependencies
+Command: npm install
+
+Purpose: This command reads the package.json file in your project directory and installs all the necessary project dependencies (libraries and frameworks) listed there. It creates a node_modules folder where these packages reside.
+
+Your Output Highlights:
+
+Numerous npm warn deprecated messages for various packages. These warnings indicate that certain packages or specific versions used by your project's dependencies are outdated or no longer maintained. While not always critical, they suggest potential future compatibility issues or security risks.
+
+added 1035 packages, and audited 1036 packages in 30s - Indicates successful installation of dependencies.
+
+7 vulnerabilities (1 low, 6 moderate) - npm identified security vulnerabilities in your installed packages.
+
+To address issues that do not require attention, run: npm audit fix
+
+To address all issues (including breaking changes), run: npm audit fix --force - These suggestions are to automatically fix detected vulnerabilities. You should consider running npm audit fix to mitigate these risks.
+
+5. Installing JSON Server Globally
+Command: npm install -g json-server
+
+Purpose: This command installs json-server globally on your system. json-server is a fake REST API tool that allows you to quickly set up a mock backend for your frontend application using a simple JSON file. Installing it globally means it's available for use from any directory in your terminal.
+
+Your Output Highlights:
+
+added 45 packages in 5s - Indicates successful global installation.
+
+6. Starting JSON Server
+Command: npx json-server data.json
+
+Purpose: This command starts the json-server and tells it to use data.json as the source for your mock API. npx is a tool that allows you to run Node.js package executables without having to install them globally (though you did install json-server globally, npx can still be used to execute it).
+
+Your Output Highlights:
+
+JSON Server started on PORT :3000 - Confirms the server is running on port 3000.
+
+Watching data.json... - The server will automatically reload if data.json is modified.
+
+Endpoints: - Lists the API endpoints based on the keys in your data.json file:
+
+http://localhost:3000/users
+
+http://localhost:3000/menuItems
+
+http://localhost:3000/map
+
+http://localhost:3000/orders
+
+Note: This means your Angular application can now make HTTP requests to these endpoints (e.g., http://localhost:3000/users) to fetch or manipulate data, simulating interaction with a real backend.
+
+This summary should provide a clear reference for the commands you've executed and their implications for your Angular development environment.
