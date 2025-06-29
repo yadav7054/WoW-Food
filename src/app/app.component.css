@@ -1,0 +1,51 @@
+.home-section {
+    position: relative; /* Needed to make the absolute positioned child work relative to this */
+  }
+  
+  .discount-bar-container {
+    position: absolute; /* Take it out of the normal flow */
+    top: 0; /* Stick it to the top of its relative parent (.home-section) */
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent background if desired */
+    color: #ff0000;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 0;
+    z-index: 10; /* Ensure it's above the content */
+  }
+  
+  .discount-bar-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scrollText 15s linear infinite;
+  }
+  
+  @keyframes scrollText {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+.page-container{
+    display: flex;
+    flex-direction: column;
+}
+.progress-container{
+    position: fixed;
+    top:0;
+    width:100%;
+    height:6px;
+    background: #eee;
+    z-index: 9999;
+}
+
+.progress-bar{
+    height: 6px;
+    background: #04AA6D;
+    width: 0%;
+    transition: width 0.2s;
+}
