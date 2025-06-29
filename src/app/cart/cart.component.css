@@ -1,0 +1,13 @@
+.cart-container {
+    background: linear-gradient(to bottom, #fffde7, #ffe082);
+    min-height: 100vh;
+  }
+  
+  table th, table td {
+    vertical-align: middle;
+  }
+  
+  input[type="number"]::-webkit-inner-spin-button {
+    opacity: 1;
+  }
+  
